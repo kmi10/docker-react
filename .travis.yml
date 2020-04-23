@@ -8,7 +8,7 @@ before_install:
    - docker build -t kmi10/docker-react -f Dockerfile .
 
 script:
-    - docker run -e CI=true kmi10/docker-react npm run test 
+    - docker run kmi10/docker-react npm run test -- --coverage 
 
  
 deploy:
