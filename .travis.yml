@@ -1,0 +1,11 @@
+language: generic 
+
+sudo: required
+services:
+   - docker
+
+berfore_install:
+   - docker build -t kmi10/Docker-react -f Dockerfile.dev .
+
+   script:
+    - docker run -e CI=true kmi10/docker-react npm run test -- --coverage
