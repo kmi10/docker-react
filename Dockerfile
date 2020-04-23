@@ -1,5 +1,4 @@
 FROM node:alpine as builder
-
 WORKDIR '/app'
 
 # Download and Install a Dependency
